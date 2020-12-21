@@ -1,0 +1,128 @@
+@page
+@model LaptopStore.Pages.Store.productModel
+@{
+    Layout = "_LayoutStore";
+    ViewData["Title"] = "Sản phẩm";
+}
+
+<div id="breadcrumb" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb-tree">
+                    <li><a href="/store/home">Home</a></li>
+                    <li class="active">Sản phẩm</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div id="aside" class="col-md-3">
+                <div class="aside">
+                    <h3 class="aside-title">Danh mục</h3>
+                    <div class="checkbox-filter" id="product-load-catelog">
+
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <h3 class="aside-title">Giá</h3>
+                    <div class="checkbox-filter">
+                        <div class="input-checkbox">
+                            <input type="radio" class="price" value="1000000" name="price" id="priceRadio">
+                            <label for="priceRadio">
+                                <span></span>
+                                Dưới 1.000.000
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="radio" class="price" value="1000000-5000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            TỪ 1.000.000 đến 5.000.000
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="radio" class="price" value="5000000-10000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            TỪ 5.000.000 đến 10.000.000
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="radio" class="price" value="10000000-15000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            TỪ 10.000.000 đến 15.000.000
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="radio" class="price" value="15000000-20000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            TỪ 15.000.000 đến 20.000.000
+                        </label>
+                    </div>
+                    <div class="input-checkbox">
+                        <input type="radio" class="price" value="20000000-30000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            TỪ 20.000.000 đến 30.000.000
+                        </label>
+                    </div><div class="input-checkbox">
+                        <input type="radio" class="price" value="30000000" name="price" id="priceRadio">
+                        <label for="priceRadio">
+                            <span></span>
+                            Trên 30.000.000
+                        </label>
+                    </div>
+                </div>
+
+                <div class="aside">
+                    <h3 class="aside-title">Top selling</h3>
+                    <div id="product-load-TopSelling"></div>
+
+                </div>
+            </div>
+
+            <div id="store" class="col-md-9">
+                <div class="store-filter clearfix">
+                    <div class="store-sort">
+                        <label>
+                            Sắp xếp:
+                            <select class="input-select" id="sortSelect">
+                                <option value="createdDate-ASC">Mới nhất</option>
+                                <option value="productName-ASC">A -> Z</option>
+                                <option value="productName-DESC">Z -> A</option>
+                                <option value="price-ASC">Giá tăng dần</option>
+                                <option value="price-DESC">Giá giảm dần</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Show:
+                            <select class="input-select" id="pageSizeSelect">
+                                <option value="9">9</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="40">40</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row" id="load-list-product">
+                </div>
+
+                <div class="store-filter clearfix">
+                    <ul class="store-pagination" id="load-pagination-priduct">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
