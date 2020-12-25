@@ -5,10 +5,11 @@ using StoreAPI.Interfaces;
 using ApplicationCore.Models;
 using AutoMapper;
 using ApplicationCore.Interfaces;
+using Microsoft.AspNetCore.Mvc;
 
 namespace StoreAPI.Services
 {
-    public class CatelogService : ICatelogService
+    public class CatelogService : ControllerBase, ICatelogService
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -18,33 +19,33 @@ namespace StoreAPI.Services
             _mapper = mapper;
         }
 
-        public Task<bool> CreateAsync(CatelogModel obj)
+        public Task<IActionResult> CreateAsync(CatelogModel obj)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<bool> DeleteAsync(int id)
+        public Task<IActionResult> DeleteAsync(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public async Task<IEnumerable<CatelogModel>> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync()
         {
             var catelogs = await _unitOfWork.Catelog.GetAllAsync();
-            return _mapper.Map<IEnumerable<Catelog>, IEnumerable<CatelogModel>>(catelogs);
+            return Ok(_mapper.Map<IEnumerable<Catelog>, IEnumerable<CatelogModel>>(catelogs));
         }
 
-        public Task<CatelogModel> GetByIdAsync(int id)
+        public Task<IActionResult> GetByIdAsync(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<PaginationList<CatelogModel>> GetPagesAsync(PaginationModel pagination)
+        public Task<IActionResult> GetPagesAsync(PaginationModel pagination)
         {
             throw new System.NotImplementedException();
         }
 
-        public Task<bool> UpdateAsync(CatelogModel obj)
+        public Task<IActionResult> UpdateAsync(CatelogModel obj)
         {
             throw new System.NotImplementedException();
         }

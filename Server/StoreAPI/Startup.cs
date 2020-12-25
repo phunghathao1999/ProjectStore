@@ -60,9 +60,8 @@ namespace StoreAPI
             //        });
             //});
 
-
             services.AddDbContext<StoreContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("StoreContext"), b => b.MigrationsAssembly("LaptopStore")).EnableSensitiveDataLogging());
+                options.UseSqlServer(Configuration.GetConnectionString("StoreContext"), b => b.MigrationsAssembly("StoreAPI")).EnableSensitiveDataLogging());
             services.AddAutoMapper(typeof(MappingProfile));
             services.Configure<CookiePolicyOptions>(options =>
             {

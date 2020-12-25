@@ -18,6 +18,8 @@ namespace Infrastructure.Persistence
         public virtual DbSet<People> People { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<ImageProduct> ImageProduct { get; set; }
+        public virtual DbSet<ProductAvatar> ProductAvatar { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

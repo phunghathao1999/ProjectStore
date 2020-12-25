@@ -11,6 +11,7 @@ namespace ApplicationCore.Entity
         public Product()
         {
             InvoiceDetail = new HashSet<InvoiceDetail>();
+            ImageProduct = new HashSet<ImageProduct>();
         }
 
         [Key]
@@ -31,6 +32,8 @@ namespace ApplicationCore.Entity
 
         [ForeignKey("catelogID")]
         public virtual Catelog Catelog { get; set; }
+        public virtual ProductAvatar  ProductAvatar { get; set; }
         public virtual ICollection<InvoiceDetail> InvoiceDetail { get; set; }
+        public virtual ICollection<ImageProduct> ImageProduct { get; set; }
     }
 }
