@@ -1,7 +1,5 @@
 using ApplicationCore.Interfaces;
-using ApplicationCore.Services;
 using AutoMapper;
-using BusinessLogic.Mapping;
 using Infrastructure.Persistence;
 using Infrastructure.Persistence.Repositories;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -17,6 +15,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using StoreAPI.Interfaces;
+using StoreAPI.Mapping;
+using StoreAPI.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
