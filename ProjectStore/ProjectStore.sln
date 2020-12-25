@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreAPI", "StoreAPI\StoreAPI.csproj", "{3825A1B2-76F7-4367-9493-AB2C9C0D13A9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreAPI", "StoreAPI\StoreAPI.csproj", "{3825A1B2-76F7-4367-9493-AB2C9C0D13A9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{36C1F779-52C0-456B-AAA5-D9D9AC19D43F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApplicationCore", "ApplicationCore\ApplicationCore.csproj", "{43DE5FCD-429A-46DA-A288-24046E65765D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaptopStore", "LaptopStore\LaptopStore.csproj", "{90B2B5EC-9DBF-4AAE-BC6F-CAEF20FF97E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{43DE5FCD-429A-46DA-A288-24046E65765D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43DE5FCD-429A-46DA-A288-24046E65765D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DE5FCD-429A-46DA-A288-24046E65765D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B2B5EC-9DBF-4AAE-BC6F-CAEF20FF97E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B2B5EC-9DBF-4AAE-BC6F-CAEF20FF97E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B2B5EC-9DBF-4AAE-BC6F-CAEF20FF97E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B2B5EC-9DBF-4AAE-BC6F-CAEF20FF97E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

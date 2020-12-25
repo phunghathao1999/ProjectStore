@@ -1,0 +1,79 @@
+@page
+@using ApplicationCore.Status
+@model LaptopStore.Pages.Store.profileInvoiceModel
+@{
+    Layout = "_LayoutStore";
+    ViewData["Title"] = "Đơn hàng";
+}
+
+<div id="breadcrumb" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @* <h3 class="breadcrumb-header">Checkout</h3> *@
+                <ul class="breadcrumb-tree">
+                    <li><a href="/store/home">Trang chủ</a></li>
+                    <li class="active">Đơn hàng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Đơn hàng</h3>
+                </div>
+                <div class="order-summary">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Người đặt</th>
+                                <th>Ngày tạo đơn</th>
+                                <th>Số điện thoại</th>
+                                <th>Địa chỉ</th>
+                                <th>Người giao</th>
+                                <th>Tổng tiền</th>
+                                <th>Trạng thái</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.invoiceModels)
+                            {
+                                <tr>
+                                    <td>@item.customerName</td>
+                                    <td>@item.createdDate</td>
+                                    <td>@item.phone</td>
+                                    <td>@item.customerAddesss</td>
+                                    @if (item.Shipper != null)
+                                    {
+                                        <td>@item.Shipper.name</td>
+                                    }
+                                    else 
+                                    {
+                                        <td></td>
+                                    }
+                                    <td>@item.totalMoney</td>
+                                    <td>@item.status</td>
+                                    <td>
+                                        @if (@item.status == InvoiceStatus.PROCESSING || @item.status == InvoiceStatus.CONFIMED)
+                                        {
+                                            <form method="post" asp-page-handler="CancelInvoice">
+                                                <input type="hidden" asp-for="invoiceModel.id" value="@item.id">
+                                                <button type="submit" class="btn btn-danger">Hủy đơn</button>
+                                            </form>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

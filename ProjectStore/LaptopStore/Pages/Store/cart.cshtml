@@ -1,0 +1,83 @@
+@page
+@model LaptopStore.Pages.Store.cartModel
+@{
+    Layout = "_LayoutStore";
+    ViewData["Title"] = "Giỏ hàng";
+}
+
+<div id="breadcrumb" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                @* <h3 class="breadcrumb-header">Checkout</h3> *@
+                <ul class="breadcrumb-tree">
+                    <li><a href="/store/home">Trang chủ</a></li>
+                    <li class="active">Giỏ hàng</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 order-details">
+                <div class="section-title text-center">
+                    <h3 class="title">Đơn đặt hàng</h3>
+                </div>
+                <div class="order-summary">
+                    <div class="order-col">
+                        <div><strong>Sản phẩm</strong></div>
+                        <div><strong>Giá</strong></div>
+                    </div>
+                    <div class="order-products" id="card-load-invoicedetail">
+                    </div>
+                    <div class="order-col">
+                        <div><strong>TOTAL</strong></div>
+                            <div id="card-load-invoice">
+                                
+                            </div>
+                    </div>
+                </div>
+                <form method="post" asp-page-handler="ConfimedInvoice">
+                    <div class="payment-method">
+                        <div class="billing-details">
+                            <div class="section-title">
+                                <h5 class="title">Thông tin khách hàng</h5>
+                            </div>
+                            @if (Model.peopleVM != null)
+                            {
+                                <div class="form-group">
+                                    <input class="input" asp-for="invoiceModel.customerName" type="text" value="@Model.peopleVM.name" placeholder="Tên người nhận" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="input" asp-for="invoiceModel.phone" type="number" value="@Model.peopleVM.phone" placeholder="Số điện thoại" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="input" asp-for="invoiceModel.customerAddesss" type="text" value="@Model.peopleVM.address" placeholder="Địa chỉ giao hàng" required>
+                                </div>
+                                <div class="order-notes">
+                                    <textarea class="input" asp-for="invoiceModel.note" placeholder="Ghi chú nếu có"></textarea>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="payment-method">
+                        <div class="input-radio">
+                            <input type="radio" name="payment" id="payment-1">
+                            <label for="payment-1">
+                                <span></span>
+                                Thanh toán khi nhận hàng
+                            </label>
+                        </div>
+                    </div>
+                    @{
+                        var tbnDisable = Model.invoiceDetailModels == null ? "disabled" : "";
+                    }
+                    <button type="submit" class="primary-btn order-submit" @tbnDisable >Đặt hàng</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
