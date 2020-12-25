@@ -5700,11 +5700,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\ProjectStore\\ProjectStore\\StoreAPI\\StoreAPI.csproj",
+      "projectUniqueName": "D:\\Development\\ProjectStore\\Server\\StoreAPI\\StoreAPI.csproj",
       "projectName": "StoreAPI",
-      "projectPath": "D:\\Development\\ProjectStore\\ProjectStore\\StoreAPI\\StoreAPI.csproj",
+      "projectPath": "D:\\Development\\ProjectStore\\Server\\StoreAPI\\StoreAPI.csproj",
       "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\ProjectStore\\ProjectStore\\StoreAPI\\obj\\",
+      "outputPath": "D:\\Development\\ProjectStore\\Server\\StoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5721,11 +5721,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Development\\ProjectStore\\ProjectStore\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "D:\\Development\\ProjectStore\\ProjectStore\\ApplicationCore\\ApplicationCore.csproj"
+            "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj"
             },
-            "D:\\Development\\ProjectStore\\ProjectStore\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "D:\\Development\\ProjectStore\\ProjectStore\\Infrastructure\\Infrastructure.csproj"
+            "D:\\Development\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\Development\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

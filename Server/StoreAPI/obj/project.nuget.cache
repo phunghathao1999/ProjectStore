@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PJDBI90pZSrKSEidShNGBMtAl7mUkHmwYmdJB86ySD3MaIDXs2wJ56YI57csQ5vPL8b6j5iA5v/OKj3jvpDoqQ==",
+  "dgSpecHash": "irEoOu/VUtln8i1dCckoLE0ceb5tdDZOk4gXQPUmtGAUfJoFYx/z4WkIu/dS/fAAm1s17XlSr8zdtDldb6SSKg==",
   "success": true,
-  "projectFilePath": "D:\\Development\\ProjectStore\\ProjectStore\\StoreAPI\\StoreAPI.csproj",
+  "projectFilePath": "D:\\Development\\ProjectStore\\Server\\StoreAPI\\StoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phung\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\phung\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

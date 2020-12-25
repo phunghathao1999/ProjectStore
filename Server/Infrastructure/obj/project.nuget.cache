@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qcQo32cak6krPTfOyCHSnjn+vy/57LOklE2IfRBuLvPYvLyJeIGb+lTK+LmWhxPufsuhwhN1nCfpxcZm9Kai8g==",
+  "dgSpecHash": "aAT9qEy/4GI56VVlcJ9tnqkKwQKd6j8ZvY5+96tEKQVTj9Koik0zNASLw5PYTTHlvjsHGF4YHFby60LnxUNDwQ==",
   "success": true,
-  "projectFilePath": "D:\\Development\\ProjectStore\\ProjectStore\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "D:\\Development\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phung\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\phung\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
