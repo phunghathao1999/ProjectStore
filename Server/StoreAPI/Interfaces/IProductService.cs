@@ -15,5 +15,6 @@ namespace StoreAPI.Interfaces
         Task<IActionResult> CreateAsync(ProductModel obj);
         Task<IActionResult> UpdateAsync(ProductModel obj);
         Task<IActionResult> DeleteAsync(int id);
+        Task<IActionResult> AddToCard(int idEmployee, int idProduct);
     }
 }
