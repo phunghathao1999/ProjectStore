@@ -1,0 +1,7 @@
+Server/.vs
+Server/ApplicationCore/bin/Debug/net5.0
+Server/Infrastructure/bin
+Server/StoreAPI/bin
+Server/StoreAPI/obj
+Server/Infrastructure/obj
+Server/ApplicationCore/obj
