@@ -8,7 +8,7 @@ import { MeterialLibraryModule } from './Share/Material/meterial-library.module'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
