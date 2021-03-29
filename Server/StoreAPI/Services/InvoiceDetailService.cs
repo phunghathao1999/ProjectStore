@@ -59,8 +59,6 @@ namespace StoreAPI.Services
             {
                 if (item.productID != null)
                     item.Product = await _unitOfWork.Product.GetByIdAsync((int)item.productID);
-                if (item.comboID != null)
-                    item.Combo = await _unitOfWork.Combo.GetByIdAsync((int)item.comboID);
             }
             return _mapper.Map<IEnumerable<InvoiceDetail>, IEnumerable<InvoiceDetailModel>>(invoiceDetails);
         }
@@ -70,8 +68,6 @@ namespace StoreAPI.Services
             var invoiceDetail = await _unitOfWork.InvoiceDetail.GetByIdAsync(id);
             if (invoiceDetail.productID != null)
                 invoiceDetail.Product = await _unitOfWork.Product.GetByIdAsync((int)invoiceDetail.productID);
-            if (invoiceDetail.comboID != null)
-                invoiceDetail.Combo = await _unitOfWork.Combo.GetByIdAsync((int)invoiceDetail.comboID);
             return _mapper.Map<InvoiceDetail, InvoiceDetailModel>(invoiceDetail);
         }
 

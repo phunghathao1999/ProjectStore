@@ -15,12 +15,10 @@ namespace ApplicationCore.Entity
         [ForeignKey("Product")]
         public Nullable<int> productID { get; set; }
         [ForeignKey("Combo")]
-        public Nullable<int> comboID { get; set; }
         public int amount { get; set; }
         public decimal price { get; set; }
 
         public virtual Invoice Invoice { get; set; }
-        public virtual Combo Combo { get; set; }
         public virtual Product Product { get; set; }
     }
 }

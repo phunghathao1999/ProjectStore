@@ -12,7 +12,6 @@ namespace Infrastructure.Persistence
 
         }
         public virtual DbSet<Catelog> Catelog { get; set; }
-        public virtual DbSet<Combo> Combo { get; set; }
         public virtual DbSet<Invoice> Invoice { get; set; }
         public virtual DbSet<InvoiceDetail> InvoiceDetail { get; set; }
         public virtual DbSet<People> People { get; set; }
@@ -196,20 +195,6 @@ namespace Infrastructure.Persistence
                     phone = 123456789,
                     registraDate = Convert.ToDateTime("19/11/2020"),
                     role_ID = 4,
-                }
-            );
-
-            modelBuilder.Entity<Combo>().HasData(
-                new Combo()
-                {
-                    id = 1,
-                    comboName = "Giảm giá Giáng Sinh",
-                    productList = "1;3;5;7",
-                    startDate = Convert.ToDateTime("19/11/2020"),
-                    endDate = Convert.ToDateTime("19/11/2021"),
-                    price = 20000000,
-                    priceSale = 15000000,
-
                 }
             );
 

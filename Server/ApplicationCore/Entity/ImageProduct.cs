@@ -19,7 +19,6 @@ namespace ApplicationCore.Entity
         public string image { get; set; }
         [ForeignKey("Product")]
         public int productID { get; set; }
-
         public virtual Product Product { get; set; }
     }
 }

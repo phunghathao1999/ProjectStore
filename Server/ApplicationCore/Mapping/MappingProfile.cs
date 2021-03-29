@@ -11,9 +11,6 @@ namespace BusinessLogic.Mapping
             CreateMap<Catelog, CatelogModel>();
             CreateMap<CatelogModel, Catelog>();
 
-            CreateMap<Combo, ComnoModel>();
-            CreateMap<ComnoModel, Combo>();
-
             CreateMap<Product, ProductModel>();
             CreateMap<ProductModel, Product>();
 

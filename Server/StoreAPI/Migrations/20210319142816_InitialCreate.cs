@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace StoreAPI.Migrations
 {
-    public partial class MyFirstMigration : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -18,24 +18,6 @@ namespace StoreAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Catelog", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Combo",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    comboName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    productList = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    startDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    endDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    price = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    priceSale = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Combo", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -189,19 +171,12 @@ namespace StoreAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     invoiceID = table.Column<int>(type: "int", nullable: false),
                     productID = table.Column<int>(type: "int", nullable: true),
-                    comboID = table.Column<int>(type: "int", nullable: true),
                     amount = table.Column<int>(type: "int", nullable: false),
                     price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_InvoiceDetail", x => x.id);
-                    table.ForeignKey(
-                        name: "FK_InvoiceDetail_Combo_comboID",
-                        column: x => x.comboID,
-                        principalTable: "Combo",
-                        principalColumn: "id",
-                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_InvoiceDetail_Invoice_invoiceID",
                         column: x => x.invoiceID,
@@ -227,11 +202,6 @@ namespace StoreAPI.Migrations
                     { 4, "Tai nghe" },
                     { 5, "Loa" }
                 });
-
-            migrationBuilder.InsertData(
-                table: "Combo",
-                columns: new[] { "id", "comboName", "endDate", "price", "priceSale", "productList", "startDate" },
-                values: new object[] { 1, "Giảm giá Giáng Sinh", new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified), 20000000m, 15000000m, "1;3;5;7", new DateTime(2020, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Role",
@@ -288,11 +258,6 @@ namespace StoreAPI.Migrations
                 column: "shipperID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InvoiceDetail_comboID",
-                table: "InvoiceDetail",
-                column: "comboID");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_InvoiceDetail_invoiceID",
                 table: "InvoiceDetail",
                 column: "invoiceID");
@@ -329,9 +294,6 @@ namespace StoreAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "ProductAvatar");
-
-            migrationBuilder.DropTable(
-                name: "Combo");
 
             migrationBuilder.DropTable(
                 name: "Invoice");

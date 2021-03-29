@@ -5,7 +5,6 @@ namespace ApplicationCore.Interfaces
     public interface IUnitOfWork
     {
         public ICatelogRepository Catelog { get; }
-        public IComboRepository Combo { get; }
         public IInvoiceRepository Invoice { get; }
         public IPeopleRepository People { get; }
         public IInvoiceDetailRepository InvoiceDetail { get; }

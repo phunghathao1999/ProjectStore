@@ -1,0 +1,84 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-icon class="icon-logo">payment</mat-icon>
+        <span class="title-logo">LaptopStore</span>
+        <span class="navbar-right"></span>
+        <div *ngIf="!user">
+            <a mat-button routerLink="login">
+                <mat-icon aria-hidden="false" aria-label="Example user verified icon">login</mat-icon>Đăng nhập</a>
+        </div>
+        <div *ngIf="user">
+            <button [matMenuTriggerFor]="menu" mat-button="">
+                <span class="mat-button-wrapper"> Xin chào {{ user }}
+                <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_drop_down</mat-icon>
+                </span>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/profile">
+                <mat-icon>person</mat-icon>
+                <span>Thông tin</span>
+                </button>
+                <button mat-menu-item (click)="logout()">
+                <mat-icon>logout</mat-icon>
+                <span>Đăng xuất</span>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container autosize>
+    <mat-drawer class="sidenav" mode="side" opened>
+        <mat-nav-list class="mat-list-show">
+            <a mat-list-item routerLink="/admin/dashboard">
+                <div class="show-icon">
+                    <mat-icon>dashboard</mat-icon>
+                </div>
+                <label>Dashboard</label>
+            </a>
+            <a mat-list-item routerLink="/admin/product">
+                <div class="show-icon">
+                    <mat-icon>laptop</mat-icon>
+                </div>
+                <label>Product</label>
+            </a>
+            <a mat-list-item routerLink="/admin/catelog">
+                <div class="show-icon">
+                    <mat-icon>category</mat-icon>
+                </div>
+                <label>Category</label>
+            </a>
+            <a mat-list-item routerLink="/admin/customer">
+                <div class="show-icon">
+                    <mat-icon>people</mat-icon>
+                </div>
+                <label>Customer</label> </a>
+            <a mat-list-item routerLink="/admin/employee">
+                <div class="show-icon">
+                    <mat-icon>person_outline</mat-icon>
+                </div>
+                <label>Employee</label>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list class="mat-list-hidden">
+            <a mat-list-item routerLink="/admin/dashboard" matTooltip="Dashboard" matTooltipPosition="right">
+                <mat-icon>dashboard</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/admin/product" matTooltip="Product" matTooltipPosition="right">
+                <mat-icon>laptop</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/admin/catelog" matTooltip="Category" matTooltipPosition="right">
+                <mat-icon>category</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/admin/customer" matTooltip="Customer" matTooltipPosition="right">
+                <mat-icon>people</mat-icon>
+            </a>
+            <a mat-list-item routerLink="/admin/employee" matTooltip="Employee" matTooltipPosition="right">
+                <mat-icon>person_outline</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
+</mat-drawer-container>

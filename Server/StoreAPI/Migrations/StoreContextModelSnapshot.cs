@@ -61,48 +61,6 @@ namespace StoreAPI.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ApplicationCore.Entity.Combo", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
-
-                    b.Property<string>("comboName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("endDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<decimal>("price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<decimal>("priceSale")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("productList")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("startDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Combo");
-
-                    b.HasData(
-                        new
-                        {
-                            id = 1,
-                            comboName = "Giảm giá Giáng Sinh",
-                            endDate = new DateTime(2021, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            price = 20000000m,
-                            priceSale = 15000000m,
-                            productList = "1;3;5;7",
-                            startDate = new DateTime(2020, 11, 19, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
             modelBuilder.Entity("ApplicationCore.Entity.ImageProduct", b =>
                 {
                     b.Property<int>("id")
@@ -179,9 +137,6 @@ namespace StoreAPI.Migrations
                     b.Property<int>("amount")
                         .HasColumnType("int");
 
-                    b.Property<int?>("comboID")
-                        .HasColumnType("int");
-
                     b.Property<int>("invoiceID")
                         .HasColumnType("int");
 
@@ -192,8 +147,6 @@ namespace StoreAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id");
-
-                    b.HasIndex("comboID");
 
                     b.HasIndex("invoiceID");
 
@@ -536,10 +489,6 @@ namespace StoreAPI.Migrations
 
             modelBuilder.Entity("ApplicationCore.Entity.InvoiceDetail", b =>
                 {
-                    b.HasOne("ApplicationCore.Entity.Combo", "Combo")
-                        .WithMany("InvoiceDetail")
-                        .HasForeignKey("comboID");
-
                     b.HasOne("ApplicationCore.Entity.Invoice", "Invoice")
                         .WithMany("InvoiceDetail")
                         .HasForeignKey("invoiceID")
@@ -549,8 +498,6 @@ namespace StoreAPI.Migrations
                     b.HasOne("ApplicationCore.Entity.Product", "Product")
                         .WithMany("InvoiceDetail")
                         .HasForeignKey("productID");
-
-                    b.Navigation("Combo");
 
                     b.Navigation("Invoice");
 
@@ -593,11 +540,6 @@ namespace StoreAPI.Migrations
             modelBuilder.Entity("ApplicationCore.Entity.Catelog", b =>
                 {
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("ApplicationCore.Entity.Combo", b =>
-                {
-                    b.Navigation("InvoiceDetail");
                 });
 
             modelBuilder.Entity("ApplicationCore.Entity.Invoice", b =>

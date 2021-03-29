@@ -15,7 +15,7 @@ namespace Infrastructure.Persistence.Repositories
 
         public async Task<InvoiceDetail> GetByProductAsync(int invoiceId, int productID)
         {
-            return await Context.InvoiceDetail.SingleOrDefaultAsync(a => (a.invoiceID == invoiceId && a.productID == productID) || (a.invoiceID == invoiceId && a.comboID == productID));
+            return await Context.InvoiceDetail.SingleOrDefaultAsync(a => (a.invoiceID == invoiceId && a.productID == productID));
         }
     }
 }

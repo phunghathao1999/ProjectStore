@@ -12,7 +12,6 @@ namespace Infrastructure.Persistence
         {
             _context = context;
             Catelog = new CatelogRepository(context);
-            Combo = new ComboRepository(context);
             Invoice = new InvoiceRepository(context);
             People = new PeopleRepository(context);
             InvoiceDetail = new InvoiceDetailRepository(context);
@@ -21,7 +20,6 @@ namespace Infrastructure.Persistence
         }
 
         public ICatelogRepository Catelog { get; }
-        public IComboRepository Combo { get; }
         public IInvoiceRepository Invoice { get; }
         public IPeopleRepository People { get; }
         public IInvoiceDetailRepository InvoiceDetail { get; }

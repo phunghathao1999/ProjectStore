@@ -73,8 +73,6 @@ const modules = [
   MatBadgeModule
 ];
 
-
-
 @NgModule({
   declarations: [],
   imports: modules,

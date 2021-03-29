@@ -92,7 +92,6 @@ namespace StoreAPI
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<ICatelogRepository, CatelogRepository>();
-            services.AddScoped<IComboRepository, ComboRepository>();
             services.AddScoped<IInvoiceRepository, InvoiceRepository>();
             services.AddScoped<IInvoiceDetailRepository, InvoiceDetailRepository>();
             services.AddScoped<IPeopleRepository, PeopleRepository>();
