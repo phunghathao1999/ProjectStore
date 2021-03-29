@@ -1,3 +1,25 @@
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+mat-drawer-container {
+    margin-top: 65px;
+    bottom: 0px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+    outline: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
 .icon-logo {
     padding-left: 10px;
 }

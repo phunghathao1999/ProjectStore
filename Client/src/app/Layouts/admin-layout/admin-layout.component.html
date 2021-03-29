@@ -1,11 +1,12 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="nav-bar" color="primary">
     <mat-toolbar-row>
-        <mat-icon class="icon-logo">payment</mat-icon>
+        <mat-icon class="icon-logo">laptop_chromebook</mat-icon>
         <span class="title-logo">LaptopStore</span>
         <span class="navbar-right"></span>
         <div *ngIf="!user">
-            <a mat-button routerLink="login">
-                <mat-icon aria-hidden="false" aria-label="Example user verified icon">login</mat-icon>Đăng nhập</a>
+            <a mat-button routerLink="/admin/login">
+                <mat-icon aria-hidden="false" aria-label="Example user verified icon">login</mat-icon>Đăng nhập
+            </a>
         </div>
         <div *ngIf="user">
             <button [matMenuTriggerFor]="menu" mat-button="">
@@ -77,8 +78,7 @@
             </a>
         </mat-nav-list>
     </mat-drawer>
-
-    <div class="body">
+    <mat-drawer-content>
         <router-outlet></router-outlet>
-    </div>
+    </mat-drawer-content>
 </mat-drawer-container>

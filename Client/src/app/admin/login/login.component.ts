@@ -15,14 +15,17 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    formLogin: FormGroup,
     // private AccountService: AccountService,
     private router: Router,
-  ) { }
+  ) {
+    this.formLogin = formLogin;
+  }
 
-  login(){
-    // const username = this.email.value;
-    // const password = this.password.value;
-    // const user: Account = { username, password } as Account;
+  login() {
+    const username = this.email?.value;
+    const password = this.password?.value;
+    const user: Account = { username, password } as Account;
     // this.AccountService.login(user).subscribe(success => {
     //   if(success) {
     //     const redirectUrl = '/admin/timework';
@@ -39,8 +42,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
-      email: ['',[Validators.required, Validators.email]],
-      password: ['',[Validators.required]]
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]]
     });
   }
   get email() {
