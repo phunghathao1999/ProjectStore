@@ -245,18 +245,6 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
-            "Microsoft.Owin.Cors": {
-              "target": "Package",
-              "version": "[4.1.1, )"
-            },
-            "Microsoft.Owin.Host.SystemWeb": {
-              "target": "Package",
-              "version": "[4.1.1, )"
-            },
-            "Microsoft.Owin.Security.OAuth": {
-              "target": "Package",
-              "version": "[4.1.1, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
