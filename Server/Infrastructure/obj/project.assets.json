@@ -5891,11 +5891,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "D:\\Development\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\ProjectStore\\Server\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5912,8 +5912,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj": {
-              "projectPath": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj"
+            "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj"
             }
           }
         }

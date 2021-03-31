@@ -5871,11 +5871,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
+      "projectUniqueName": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
       "projectName": "ApplicationCore",
-      "projectPath": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
+      "projectPath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
       "packagesPath": "C:\\Users\\phung\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\obj\\",
+      "outputPath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\phung\\AppData\\Roaming\\NuGet\\NuGet.Config",

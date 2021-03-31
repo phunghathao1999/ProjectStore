@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Account } from 'src/app/Models/Account';
 
 @Component({
@@ -10,19 +10,10 @@ import { Account } from 'src/app/Models/Account';
 })
 export class LoginComponent implements OnInit {
 
-  formLogin: FormGroup;
+  formLogin!: FormGroup;
   submittedLogin = true;
 
-  constructor(
-    private formBuilder: FormBuilder,
-    formLogin: FormGroup,
-    // private AccountService: AccountService,
-    private router: Router,
-  ) {
-    this.formLogin = formLogin;
-  }
-
-  login() {
+  login(){
     const username = this.email?.value;
     const password = this.password?.value;
     const user: Account = { username, password } as Account;
@@ -40,10 +31,17 @@ export class LoginComponent implements OnInit {
     // });
   }
 
+  constructor(
+    private formBuilder: FormBuilder,
+    // private AccountService: AccountService,
+    private router: Router,
+    ) { }
+
   ngOnInit(): void {
+
     this.formLogin = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]]
+      email: ['',[Validators.required, Validators.email]],
+      password: ['',[Validators.required]]
     });
   }
   get email() {
@@ -52,4 +50,5 @@ export class LoginComponent implements OnInit {
   get password() {
     return this.formLogin.get('password');
   }
+
 }

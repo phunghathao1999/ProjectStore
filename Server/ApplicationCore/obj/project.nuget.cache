@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uySCY5GoRw+jHBmWPUZT9k7MNL+kB6M0ix+g5KxzqmAj81H4MO0U8aCopHI0MMNJJsG9wyMgVTM5eweRSfgCGw==",
+  "dgSpecHash": "9r1uXLKx6jWwfQnEp7E1IQPfsb0jxIg1r4QaWSxTniQM6aDZR4ZTn9cOmyQk83DnIWfFTeWO11f8IeH7Jw1mxA==",
   "success": true,
-  "projectFilePath": "D:\\Development\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
+  "projectFilePath": "C:\\Users\\phung\\Desktop\\ProjectStore\\Server\\ApplicationCore\\ApplicationCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phung\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\phung\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

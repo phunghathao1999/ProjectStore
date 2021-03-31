@@ -43,22 +43,12 @@ namespace StoreAPI
                 options.AddPolicy(MyAllowSpecificOrigins,
                     builder => {
                         builder.WithOrigins(
-                                "http://localhost:4000/"
+                                "http://localhost:4200/"
                             )
                             .AllowAnyHeader()
                             .AllowAnyMethod();
                     });
             });
-            //services.AddCors(options =>
-            //{
-            //    options.AddDefaultPolicy(
-            //        builder =>
-            //        {
-            //            builder.WithOrigins("http://localhost:4000/")
-            //                                .AllowAnyHeader()
-            //                                .AllowAnyMethod();
-            //        });
-            //});
 
             services.AddDbContext<StoreContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("StoreContext"), b => b.MigrationsAssembly("StoreAPI")).EnableSensitiveDataLogging());
