@@ -94,7 +94,6 @@ C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\bin\Debug\net5.0\Appl
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\bin\Debug\net5.0\ApplicationCore.dll
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\bin\Debug\net5.0\ref\ApplicationCore.dll
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\bin\Debug\net5.0\ApplicationCore.pdb
-C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\obj\Debug\net5.0\ApplicationCore.csprojAssemblyReference.cache
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\obj\Debug\net5.0\ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfoInputs.cache
 C:\Users\phung\Desktop\ProjectStore\Server\ApplicationCore\obj\Debug\net5.0\ApplicationCore.AssemblyInfo.cs
