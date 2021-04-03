@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Server.Controllers
@@ -33,35 +35,90 @@ namespace Server.Controllers
             return Ok(_mapper.Map<IEnumerable<People>, IEnumerable<PeopleModel>>(people));
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> GetPeople(int id)
-        //{
-        //    return await _peopleService.GetByIdAsync(id);
-        //}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetPeople(int id)
+        {
+            var people = await _unitOfWork.People.GetByIdAsync(id);
+            if (people == null)
+                return BadRequest(new { success = false, message = "Id không tồn tại" });
+            people.Role = await _unitOfWork.Role.GetByIdAsync(people.role_ID);
 
-        //[HttpGet("pages")]
-        //public async Task<IActionResult> GetPages(PaginationModel paginationModel)
-        //{
-        //    return await _peopleService.GetPagesAsync(paginationModel);
-        //}
+            return Ok(_mapper.Map<People, PeopleModel>(people));
+        }
 
-        //[HttpPost]
-        //public async Task<IActionResult> CreatePeople(PeopleModel peopleModel)
-        //{
-        //    return await _peopleService.CreateAsync(peopleModel);
-        //}
+        [HttpGet("pages")]
+        public async Task<IActionResult> GetPages(PaginationModel paginationModel)
+        {
+            var peoples = await _unitOfWork.People.GetAllAsync();
+            var peopleModels = _mapper.Map<IEnumerable<People>, IEnumerable<PeopleModel>>(peoples);
+            if (!string.IsNullOrEmpty(paginationModel.searchValue))
+            {
+                peopleModels = peopleModels.Where(a =>
+                    a.name.ToLower().Contains(paginationModel.searchValue.ToLower()));
+            }
+            return Ok(PaginationList<PeopleModel>.Create(peopleModels, paginationModel.currentPage, paginationModel.pageSize));
+        }
 
-        //[HttpPost]
-        //public async Task<IActionResult> UpdatePeople(int id, PeopleModel peopleModel)
-        //{
-        //    return await _peopleService.UpdateAsync(peopleModel);
-        //}
+        [HttpPost("create")]
+        public async Task<IActionResult> CreatePeople(PeopleModel peopleModel)
+        {
+            var peopletmp = await _unitOfWork.People.GetByEmailAsync(peopleModel.username);
+            if (peopletmp != null)
+                return BadRequest(new { success = false, message = "Email đã tồn tại" });
 
-        //[HttpPost]
-        //public async Task<IActionResult> DeletePeople(int id)
-        //{
-        //    return await _peopleService.DeleteAsync(id);
-        //}
+            var people = _mapper.Map<PeopleModel, People>(peopleModel);
+            StringBuilder hash = new StringBuilder();
+            MD5CryptoServiceProvider md5provider = new MD5CryptoServiceProvider();
+            byte[] bytes = md5provider.ComputeHash(new UTF8Encoding().GetBytes(people.password));
+
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                hash.Append(bytes[i].ToString("x2"));
+            }
+            people.password = hash.ToString();
+
+            await _unitOfWork.People.AddAsync(people);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { success = true, message = "Tạo thành công" });
+        }
+
+        [HttpPost("update")]
+        public async Task<IActionResult> UpdatePeople(int id, PeopleModel peopleModel)
+        {
+            var people = await _unitOfWork.People.GetByIdAsync(id);
+            if (people == null)
+                return BadRequest(new { success = false, message = "Id không tồn tại" });
+
+            StringBuilder hash = new StringBuilder();
+            MD5CryptoServiceProvider md5provider = new MD5CryptoServiceProvider();
+            byte[] bytes = md5provider.ComputeHash(new UTF8Encoding().GetBytes(people.password));
+
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                hash.Append(bytes[i].ToString("x2"));
+            }
+            peopleModel.password = hash.ToString();
+
+            _mapper.Map<PeopleModel, People>(peopleModel, people);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { success = true, data = _mapper.Map<People, PeopleModel>(people), message = "Sửa thành công." });
+        }
+
+        [HttpPost("delete")]
+        public async Task<IActionResult> DeletePeople(int id)
+        {
+            var people = await _unitOfWork.People.GetByIdAsync(id);
+
+            if (people == null)
+                return BadRequest(new { success = false, message = "Id không tồn tại" });
+
+            await _unitOfWork.People.RemoveAsync(people);
+            await _unitOfWork.CompleteAsync();
+
+            return Ok(new { success = true, message = "Xóa thành công" });
+        }
 
 
         //[HttpPost("login")]
