@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Account } from 'src/app/Models/Account';
+import { Login } from 'src/app/Models/Login';
+import { AccountServer } from 'src/app/Server/account.server';
 
 @Component({
   selector: 'app-login',
@@ -16,24 +18,23 @@ export class LoginComponent implements OnInit {
   login(){
     const username = this.email?.value;
     const password = this.password?.value;
-    const user: Account = { username, password } as Account;
-    // this.AccountService.login(user).subscribe(success => {
-    //   if(success) {
-    //     const redirectUrl = '/admin/timework';
+    const user: Login = { username, password } as Login;
+    this.accountServer.login(user).subscribe(success => {
+      if(success) {
+        const redirectUrl = '/admin/dashboard';
+        const navigationExtras: NavigationExtras = {
+          queryParamsHandling: 'preserve',
+          preserveFragment: true
+        };
 
-    //     const navigationExtras: NavigationExtras = {
-    //       queryParamsHandling: 'preserve',
-    //       preserveFragment: true
-    //     };
-
-    //     this.router.navigate([redirectUrl], navigationExtras);
-    //   }
-    // });
+        this.router.navigate([redirectUrl], navigationExtras);
+      }
+    });
   }
 
   constructor(
     private formBuilder: FormBuilder,
-    // private AccountService: AccountService,
+    private accountServer: AccountServer,
     private router: Router,
     ) { }
 

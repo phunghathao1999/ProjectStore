@@ -1,29 +1,32 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { of, Observable } from 'rxjs';
-import { catchError, mapTo, tap } from 'rxjs/operators';
+import { catchError, map, mapTo, tap } from 'rxjs/operators';
 
 import { Account } from '../Models/Account';
 import { Common } from '../Share/Common';
+import { Login } from '../Models/Login';
 
 @Injectable({
   providedIn: 'root'
 })
 
-export class AccountService {
+export class AccountServer {
 
-  url = 'http://localhost:8080/api/account';
+  url = 'https://localhost:44336/api/People';
   constructor(
     private http: HttpClient,
   ) {}
 
-  login(login: Account): Observable<boolean> {
+  login(login: Login): Observable<boolean> {
     return this.http.post<any>(`${this.url}/login`, login)
       .pipe(
-        tap(account => {
-          this.storeTokens(account)
+        map((data: any) => {
+          this.storeTokens(data.data)
+          return{
+            ...data,
+          }
         }),
-        mapTo(true),
         catchError(error => {
           return of(false);
         })
@@ -42,47 +45,6 @@ export class AccountService {
         }));
   }
 
-  checkPassword(password: string): Observable<boolean> {
-    return this.http.post<any>(this.url + "/verifypassword", password)
-    .pipe(
-      mapTo(true),
-        catchError(error => {
-          return of(false);
-        })
-    )
-  }
-
-  checkMail(email: string): Observable<boolean> {
-    return this.http.post<any>(this.url + "/forgot", email)
-    .pipe(
-      mapTo(true),
-        catchError(error => {
-          return of(false);
-        })
-    )
-  }
-
-  verifyToken(tokens: string): Observable<boolean> {
-    return this.http.post<any>(this.url + "/verify",tokens)
-    .pipe(
-      mapTo(true),
-        catchError(error => {
-          return of(false);
-        })
-    )
-  }
-
-  createPasswork(account: Account): Observable<boolean> {
-
-    return this.http.post<any>(this.url + "/active", account)
-    .pipe(
-      mapTo(true),
-        catchError(error => {
-          return of(false);
-        })
-    )
-  }
-  
   getJwtUser() {
     return sessionStorage.getItem(Common.USER);
   }

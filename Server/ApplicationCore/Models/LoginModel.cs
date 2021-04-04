@@ -5,7 +5,7 @@ namespace ApplicationCore.Models
     public class LoginModel
     {
         [Required]
-        public string email { get; set; }
+        public string username { get; set; }
         [Required]
         public string password { get; set; }
     }

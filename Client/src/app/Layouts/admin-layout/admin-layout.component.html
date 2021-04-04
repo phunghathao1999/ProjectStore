@@ -1,7 +1,7 @@
 <mat-toolbar class="nav-bar" color="primary">
     <mat-toolbar-row>
         <mat-icon class="icon-logo">laptop_chromebook</mat-icon>
-        <span class="title-logo">LaptopStore</span>
+        <span class="title-logo">Manage</span>
         <span class="navbar-right"></span>
         <div *ngIf="!user">
             <a mat-button routerLink="/admin/login">
@@ -30,7 +30,7 @@
 <mat-drawer-container autosize>
     <mat-drawer class="sidenav" mode="side" opened>
         <mat-nav-list class="mat-list-show">
-            <a mat-list-item routerLink="/admin/dashboard">
+            <!-- <a mat-list-item routerLink="/admin/dashboard">
                 <div class="show-icon">
                     <mat-icon>dashboard</mat-icon>
                 </div>
@@ -52,7 +52,7 @@
                 <div class="show-icon">
                     <mat-icon>people</mat-icon>
                 </div>
-                <label>Customer</label> </a>
+                <label>Customer</label> </a> -->
             <a mat-list-item routerLink="/admin/employee">
                 <div class="show-icon">
                     <mat-icon>person_outline</mat-icon>
@@ -61,7 +61,7 @@
             </a>
         </mat-nav-list>
         <mat-nav-list class="mat-list-hidden">
-            <a mat-list-item routerLink="/admin/dashboard" matTooltip="Dashboard" matTooltipPosition="right">
+            <!-- <a mat-list-item routerLink="/admin/dashboard" matTooltip="Dashboard" matTooltipPosition="right">
                 <mat-icon>dashboard</mat-icon>
             </a>
             <a mat-list-item routerLink="/admin/product" matTooltip="Product" matTooltipPosition="right">
@@ -72,7 +72,7 @@
             </a>
             <a mat-list-item routerLink="/admin/customer" matTooltip="Customer" matTooltipPosition="right">
                 <mat-icon>people</mat-icon>
-            </a>
+            </a> -->
             <a mat-list-item routerLink="/admin/employee" matTooltip="Employee" matTooltipPosition="right">
                 <mat-icon>person_outline</mat-icon>
             </a>

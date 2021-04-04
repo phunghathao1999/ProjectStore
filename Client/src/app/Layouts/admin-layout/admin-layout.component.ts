@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AccountServer } from 'src/app/Server/account.server';
 
 @Component({
   selector: 'app-admin-layout',
@@ -7,21 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminLayoutComponent implements OnInit {
 
-  user: string | undefined;
+  user!: string | null;
   logout() {
-    // this.accountService.logout().subscribe(success => {
-    //   window.location.reload();
-    // })
+    this.accountServer.logout().subscribe(success => {
+      window.location.reload();
+    })
   }
 
   getUser() {
-    // if(this.accountService.getJwtUser()) {
-    //   this.user = this.accountService.getJwtUser();
-    // }
+    if(this.accountServer.getJwtUser()) {
+      this.user = this.accountServer.getJwtUser();
+    }
   }
 
   constructor(
-    // private accountService: AccountService,
+    private accountServer: AccountServer,
   ) { }
 
   ngOnInit(): void {

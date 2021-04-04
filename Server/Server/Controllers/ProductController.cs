@@ -2,7 +2,8 @@
 using ApplicationCore.Interfaces;
 using ApplicationCore.Models;
 using AutoMapper;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ProductController : ControllerBase
     {
         private readonly IUnitOfWork _unitOfWork;
@@ -166,5 +168,82 @@ namespace Server.Controllers
 
             return Ok(new { success = true, message = "Xóa thành công" });
         }
+
+        //[HttpPost("addtocard")]
+        //public async Task<IActionResult> AddToCard(int idEmployee, int idProduct)
+        //{
+        //    var peopleModel = await _unitOfWork.People.GetByIdAsync(idEmployee);
+        //    if (peopleModel != null)
+        //    {
+
+        //        var oldInvoice = await _invoiceService.GetByStatusAsync(peopleModel.id, InvoiceStatus.PROCESSING);
+        //        if (oldInvoice != null)
+        //        {
+        //            var oldInvoiceDetail = await _invoiceDetailService.GetByProductAsync(oldInvoice.id, idProduct);
+        //            if (oldInvoiceDetail != null)
+        //            {
+        //                oldInvoiceDetail.amount = oldInvoiceDetail.amount + 1;
+        //                // oldInvoiceDetail.productID = productID;
+        //                if (oldInvoiceDetail.Product.priceSale > 0)
+        //                {
+        //                    oldInvoiceDetail.price = oldInvoiceDetail.price + oldInvoiceDetail.Product.priceSale;
+        //                    oldInvoice.totalMoney = oldInvoice.totalMoney + oldInvoiceDetail.Product.priceSale;
+        //                }
+        //                else
+        //                {
+        //                    oldInvoiceDetail.price = oldInvoiceDetail.price + oldInvoiceDetail.Product.price;
+        //                    oldInvoice.totalMoney = oldInvoice.totalMoney + oldInvoiceDetail.Product.price;
+        //                }
+
+        //                await _invoiceDetailService.UpdateAsync(oldInvoiceDetail);
+        //                await _invoiceService.UpdateAsync(oldInvoice);
+        //            }
+        //            else
+        //            {
+        //                var productModel = await _iProductService.GetByIdAsync(productID);
+
+        //                InvoiceDetailModel invoiceDetailModel = new InvoiceDetailModel();
+        //                invoiceDetailModel.productID = productID;
+        //                invoiceDetailModel.amount = 1;
+        //                invoiceDetailModel.invoiceID = oldInvoice.id;
+
+        //                if (productModel.priceSale > 0)
+        //                {
+        //                    invoiceDetailModel.price = productModel.priceSale;
+        //                    oldInvoice.totalMoney = oldInvoice.totalMoney + productModel.priceSale;
+        //                }
+        //                else
+        //                {
+        //                    invoiceDetailModel.price = productModel.price;
+        //                    oldInvoice.totalMoney = oldInvoice.totalMoney + productModel.price;
+        //                }
+        //                await _invoiceDetailService.CreateAsync(invoiceDetailModel);
+        //                await _invoiceService.UpdateAsync(oldInvoice);
+        //            }
+
+        //        }
+        //        else
+        //        {
+        //            var productModel = await _iProductService.GetByIdAsync(productID);
+
+        //            InvoiceModel newInvoice = new InvoiceModel();
+        //            newInvoice.createdDate = DateTime.Now;
+        //            newInvoice.customerID = peopleModel.id;
+        //            newInvoice.status = InvoiceStatus.PROCESSING;
+        //            newInvoice.totalMoney = productModel.priceSale;
+        //            await _invoiceService.CreateAsync(newInvoice);
+
+        //            InvoiceDetailModel invoiceDetailModel = new InvoiceDetailModel();
+        //            invoiceDetailModel.productID = productID;
+        //            invoiceDetailModel.amount = 1;
+        //            invoiceDetailModel.price = productModel.priceSale * invoiceDetailModel.amount;
+        //            var invoiceModel = await _invoiceService.GetByStatusAsync(peopleModel.id, InvoiceStatus.PROCESSING);
+        //            invoiceDetailModel.invoiceID = invoiceModel.id;
+        //            await _invoiceDetailService.CreateAsync(invoiceDetailModel);
+        //        }
+        //        return new JsonResult(true);
+        //    }
+        //    return new JsonResult(false);
+        //}
     }
 }
