@@ -39,7 +39,7 @@ namespace Infrastructure.Persistence
                         amount = 10,
                         price = 13690000,
                         priceSale = 13000000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz;Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -51,7 +51,7 @@ namespace Infrastructure.Persistence
                         amount = 7,
                         price = 28990000,
                         priceSale = 28990000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -61,7 +61,7 @@ namespace Infrastructure.Persistence
                         catelogID = 2,
                         amount = 7,
                         price = 790000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -71,7 +71,7 @@ namespace Infrastructure.Persistence
                         catelogID = 2,
                         amount = 7,
                         price = 690000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -81,7 +81,7 @@ namespace Infrastructure.Persistence
                         catelogID = 3,
                         amount = 7,
                         price = 290000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -91,7 +91,7 @@ namespace Infrastructure.Persistence
                         catelogID = 3,
                         amount = 7,
                         price = 290000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -101,7 +101,7 @@ namespace Infrastructure.Persistence
                         catelogID = 4,
                         amount = 7,
                         price = 790000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -111,7 +111,7 @@ namespace Infrastructure.Persistence
                         catelogID = 4,
                         amount = 7,
                         price = 3790000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -121,7 +121,7 @@ namespace Infrastructure.Persistence
                         catelogID = 5,
                         amount = 7,
                         price = 3390000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     },
                     new Product()
@@ -131,7 +131,7 @@ namespace Infrastructure.Persistence
                         catelogID = 5,
                         amount = 7,
                         price = 2952000,
-                        createdDate = Convert.ToDateTime("19/11/2020"),
+                        createdDate = Convert.ToDateTime("11/19/2020"),
                         productDetail = "CPU: Intel Core i3 Ice Lake, 1005G1, 1.20 GHz;RAM: 8 GB, DDR4 (On board 4GB +1 khe 4GB), 2400 MHz; Ổ cứng: SSD 512 GB M.2 PCIe, Hỗ trợ khe cắm HDD SATA;Màn hình: 15.6 inch, Full HD (1920 x 1080);Card màn hình: Card đồ họa tích hợp, Intel UHD Graphics;Cổng kết nối: 2 x USB 2.0, USB 3.1, HDMI, LAN (RJ45);Hệ điều hành: Windows 10 Home SL;Thiết kế: Vỏ nhựa, PIN liền;Kích thước: Dày 19.9 mm, 1.7 kg",
                     }
                 );
@@ -151,10 +151,10 @@ namespace Infrastructure.Persistence
                     password = "f8b1688fccda97a9750c65fe0baed7e2",
                     name = "Nguyen van A",
                     gender = "Nam",
-                    birthDate = Convert.ToDateTime("19/11/2000"),
+                    birthDate = Convert.ToDateTime("11/19/2020"),
                     address = "273 An Duong vuong, Quan 5, TP.Ho Chi Minh",
                     phone = 123456789,
-                    registraDate = Convert.ToDateTime("19/11/2020"),
+                    registraDate = Convert.ToDateTime("11/19/2020"),
                     role_ID = 1,
                 },
                 new People()
@@ -164,10 +164,10 @@ namespace Infrastructure.Persistence
                     password = "f8b1688fccda97a9750c65fe0baed7e2",
                     name = "Nguyen van B",
                     gender = "Nam",
-                    birthDate = Convert.ToDateTime("19/11/2000"),
+                    birthDate = Convert.ToDateTime("11/19/2020"),
                     address = "273 An Duong vuong, Quan 5, TP.Ho Chi Minh",
                     phone = 123456789,
-                    registraDate = Convert.ToDateTime("19/11/2020"),
+                    registraDate = Convert.ToDateTime("11/19/2020"),
                     role_ID = 2,
                 },
                 new People()
@@ -177,10 +177,10 @@ namespace Infrastructure.Persistence
                     password = "f8b1688fccda97a9750c65fe0baed7e2",
                     name = "Nguyen van C",
                     gender = "Nam",
-                    birthDate = Convert.ToDateTime("19/11/2000"),
+                    birthDate = Convert.ToDateTime("11/19/2020"),
                     address = "273 An Duong vuong, Quan 5, TP.Ho Chi Minh",
                     phone = 123456789,
-                    registraDate = Convert.ToDateTime("19/11/2020"),
+                    registraDate = Convert.ToDateTime("11/19/2020"),
                     role_ID = 3,
                 },
                 new People()
@@ -190,10 +190,10 @@ namespace Infrastructure.Persistence
                     password = "f8b1688fccda97a9750c65fe0baed7e2",
                     name = "Nguyen van D",
                     gender = "Nam",
-                    birthDate = Convert.ToDateTime("19/11/2000"),
+                    birthDate = Convert.ToDateTime("11/19/2020"),
                     address = "273 An Duong vuong, Quan 5, TP.Ho Chi Minh",
                     phone = 123456789,
-                    registraDate = Convert.ToDateTime("19/11/2020"),
+                    registraDate = Convert.ToDateTime("11/19/2020"),
                     role_ID = 4,
                 }
             );
