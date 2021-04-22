@@ -15,13 +15,13 @@ import { People } from "../Models/People";
     constructor(private http: HttpClient){}
     
     // Get: get employees from service
-      getEmployees(): Observable<People[]>{
-        return this.http.get<People[]>(this.url + '/', {  })
-          .pipe(
-            catchError(err => {
-              return throwError("Error method getEmployee");
-            })
-          );
-      }
+    getEmployees(): Observable<People[]>{
+      return this.http.get<People[]>(this.url + '/', {  })
+        .pipe(
+          catchError(err => {
+            return throwError("Error method getEmployee");
+          })
+        );
+    }
   
   }

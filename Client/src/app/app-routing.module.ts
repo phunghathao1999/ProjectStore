@@ -4,7 +4,7 @@ import { EmployeeComponent } from './admin/employee/employee.component';
 
 const routes: Routes = [
   { path: 'employee', component: EmployeeComponent },
-  { path: '', redirectTo:'employee', pathMatch:'full'},
+  // { path: '', redirectTo:'employee', pathMatch:'full'},
 ]
 @NgModule({
   imports: [
