@@ -5,20 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MeterialLibraryModule } from './Share/Material/meterial-library.module';
-import { AdminLayoutComponent } from './Layouts/admin-layout/admin-layout.component';
-import { AdminLayoutModule } from './Layouts/admin-layout/admin-layout.module';
+import { EmployeeComponent } from './admin/employee/employee.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AdminLayoutComponent,
+    EmployeeComponent,
   ],
   imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
     MeterialLibraryModule,
-    AdminLayoutModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

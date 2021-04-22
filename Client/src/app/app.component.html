@@ -1,1 +1,50 @@
-<router-outlet></router-outlet>
+<mat-toolbar class="nav-bar" color="primary">
+    <mat-toolbar-row>
+        <mat-icon class="icon-logo">laptop_chromebook</mat-icon>
+        <span class="title-logo">Manage</span>
+        <span class="navbar-right"></span>
+        <div *ngIf="!user">
+            <a mat-button routerLink="/admin/login">
+                <mat-icon aria-hidden="false" aria-label="Example user verified icon">login</mat-icon>Đăng nhập
+            </a>
+        </div>
+        <div *ngIf="user">
+            <button [matMenuTriggerFor]="menu" mat-button="">
+                <span class="mat-button-wrapper"> Xin chào {{ user }}
+                <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true">arrow_drop_down</mat-icon>
+                </span>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/profile">
+                <mat-icon>person</mat-icon>
+                <span>Thông tin</span>
+                </button>
+                <button mat-menu-item>
+                <mat-icon>logout</mat-icon>
+                <span>Đăng xuất</span>
+                </button>
+            </mat-menu>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container autosize>
+    <mat-drawer class="sidenav" mode="side" opened>
+        <mat-nav-list class="mat-list-show">
+
+            <a mat-list-item routerLink="/employee">
+                <div class="show-icon">
+                    <mat-icon>person_outline</mat-icon>
+                </div>
+                <label>Employee</label>
+            </a>
+        </mat-nav-list>
+        <mat-nav-list class="mat-list-hidden">
+            <a mat-list-item routerLink="/employee" matTooltip="Employee" matTooltipPosition="right">
+                <mat-icon>person_outline</mat-icon>
+            </a>
+        </mat-nav-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

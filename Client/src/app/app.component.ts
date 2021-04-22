@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Client';
+  user!: string | null;
+
+  getUser() {
+  }
+
+  constructor(
+  ) { }
+
+  ngOnInit(): void {
+  }
 }

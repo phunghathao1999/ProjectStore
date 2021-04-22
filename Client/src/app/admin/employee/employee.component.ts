@@ -15,12 +15,11 @@ export class EmployeeComponent implements OnInit {
   
   constructor(
     private employeeServer: PeopleServer,
-    public dialog: MatDialog
-  ) { }
+    public dialog: MatDialog,
+  ){}
 
   ngOnInit(): void {
     this.employeeServer.getEmployees()
       .subscribe((result: People[]) => this.employees = result);
   }
-
 }

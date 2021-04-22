@@ -1,4 +1,4 @@
-import { HttpClient, HttpParams } from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { throwError } from "rxjs";
 import { Observable } from "rxjs";
@@ -11,7 +11,7 @@ import { People } from "../Models/People";
   
   export class PeopleServer {
   
-    url = 'https://localhost:44336/api/People';
+    url = 'https://localhost:5001/api/People';
     constructor(private http: HttpClient){}
     
     // Get: get employees from service
